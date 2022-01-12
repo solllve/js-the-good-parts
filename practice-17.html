@@ -1,0 +1,66 @@
+
+
+<script>
+
+  //for lets you loop through number.
+  sum = 0
+  for (i = 0; i < 10; i++) {
+    sum += i
+  }
+  document.writeln(sum.toString())
+
+
+  //for in lets you loop through properties in array.
+
+  const person = {
+    fname: "john",
+    lnam: "doe",
+    age: 25
+  }
+
+  let text = ''
+  for (let x in person) {
+    text += person[x]
+  }
+
+  const numbers = [12,4,9,25]
+
+  let txt = "";
+  for (let x in numbers) {
+    txt += numbers[x]
+  }
+  document.writeln(txt.toString())
+
+  document.writeln(text.toString())
+
+  //for each runs a function for each number in array.
+  const numbers2 = [23,45,7,2,3]
+
+  let txt2 = "";
+  numbers2.forEach(myFunction)
+
+  function myFunction(value, index,array) {
+    txt2 += value
+  }
+
+  document.writeln(txt2.toString())
+
+  //for of statement loops through the values of an iterable.
+
+  const cars = ["bmw", "volvo", "mini"]
+
+  let text3 = ""
+  for (let x of cars) {
+    text3 += x
+  }
+  document.writeln(text3.toString())
+
+  //use parameter defaults.
+
+  function myFunction(x, y) {
+    if (y === undefined) {
+      y = 0;
+    }
+  }
+
+</script>

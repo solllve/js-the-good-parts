@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <ul class="list_generate">
+  </ul>
+  <script>
+    let listGenerate = document.querySelector('.list_generate')
+    // create a list of items
+    const array = [
+      'list1',
+      'list2',
+      'list3'
+    ]
+
+    array.push('list4')
+
+    const listOrganized = array.map(x => '<li>' + x + '</li>').sort().join('')
+
+    listGenerate.innerHTML = listOrganized
+
+  </script>
+</body>
+</html>

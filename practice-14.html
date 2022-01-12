@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+  <div class="tableGenerate"></div>
+  <script>
+    //createElement
+    //createTextNode
+    //createTHead
+    //insertRow
+    //appendChild
+    //insertCell(0);
+
+    //(n *= 12); i = 1; i < 13
+    //one header row.
+    //12 body rows
+    //12 columns
+
+    const app = document
+
+    function generateTable() {
+      return app.querySelector('.tableGenerate').appendChild(app.createElement('table'))
+    }
+    function generateTableHead(table) {
+      table.insertRow().appendChild(app.createTextNode('works'))
+      table.insertRow().appendChild(app.createTextNode('works'))
+      table.insertRow().appendChild(app.createTextNode('works'))
+    }
+
+    generateTableHead(generateTable())
+
+
+
+  </script>
+</body>
+</html>

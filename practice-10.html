@@ -1,0 +1,28 @@
+<form class="form__character">
+  <input onkeyup="checkText()" name="text_name" type="text" />
+  <input name="submit_button" type="button" value="submit" />
+  <span class="helper__text">Your character limit is 255</span>
+</form>
+<script>
+  // create a character counter on a text field. when the character count goes below 0, disable the submit button, and add any other affordances you think best indicate to the user that they have hit the character limit.
+
+  // input character_count type="text"
+  // disable class modifier = --disable-btn
+  // c = character_count.value
+  // n = character_count.length
+  // l = 255 characters
+  // n >= 0 || n <= l  ? 'allow submit' : '--disable-btn' class append
+  // let hint_text "you have hit character limit"
+
+  const app = document;
+  let character_input = app.querySelector('.form__character').elements['text_name']
+  let submit_button = app.querySelector('.form__character').elements['submit_button']
+
+  function checkText() {
+    let c = character_input.value
+    let n = character_input.value.length
+    let b = submit_button
+    n <= 0 ? submit_button.classList.add('--disable') : submit_button.classList.remove('--disable')
+  }
+
+</script>

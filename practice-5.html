@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+  <form class="number__form">
+    <input name="num" type="number" />
+    <input onclick="getSumOfNumbers()" type="button" value="submit" />
+  </form>
+  <script>
+    /* Write a program that asks the user for a number n and prints the sum of the numbers 1 to n */
+    /* loop numbers 1 through input */
+    /* total equals looped numbers plus 1 */
+
+    function divideNumber(n) {
+      if (n % 3 === 0) {
+        return n
+      }
+    }
+
+    console.log(divideNumber(6))
+
+    function getSumFormula(n) {
+      let total = 0;
+      for (let i = 0; i <= n; i++) {
+        total += i
+      }
+      return total
+    }
+
+    function getSumOfNumbers() {
+      let form = document.querySelector('.number__form');
+      let numberInput = form.elements['num'].value;
+      console.log(getSumFormula(numberInput))
+    }
+  </script>
+</body>
+</html>

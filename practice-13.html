@@ -1,0 +1,28 @@
+
+<script>
+// process an individual data item
+function Process(dataitem) {
+  console.log(dataitem);
+}
+
+// processing is complete
+function Done() {
+  console.log("Done");
+}
+
+// test data
+var data = [];
+for (var i = 0; i < 500; i++) data[i] = i;
+
+// process all items
+ProcessArray(data, Process, Done);
+</script>
+<!-- https://alistapart.com/article/taming-data-with-javascript/-->
+<!-- Getting your data into perfect form so you can avoid any and all manipulation in the front end doesn’t need to be the goal. Instead, get the data reduced to a multidimensional dataset. Define several key dimensions (e.g., people, products, places, and time) and measures (e.g., sum, count, average, minimum, and maximum) that your client would be interested in. Finally, present the data on the page with form elements that can slice the data in a way that allows for deeper analysis. -->
+
+<!-- Array.filter()
+The filter() method of the Array prototype (Array.prototype.filter()) takes a function that tests every item in the array, returning another array containing only the values that passed the test. It allows you to create meaningful subsets of the data based on select dropdown or text filters. Provided you included meaningful, discrete dimensions for your multidimensional dataset, your user will be able to gain insight by viewing individual slices of data.-->
+
+<!-- Start with a raw, transactional dataset;
+Create a semi-aggregated, multidimensional dataset;
+And dynamically build a fully composed result.-->

@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+
+  <script>
+    async function hello() {
+      return "hello"
+    }
+    hello().then((value) => console.log(value))
+
+    async function myFetch() {
+      let res = await fetch('https://api.safecast.org/en-US/measurements')
+      if (!res.ok) {
+        throw new Error(`error stats: ${res.status}`)
+      }
+      return await res.blob()
+    }
+    myFetch().then((blob) => {
+      console.log(blob)
+    }).catch(e => console.log(e))
+
+  </script>
+</body>
+</html>

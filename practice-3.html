@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head></head>
+<body>
+  <form class="my__form">
+    <input type="text" name="name" placeholder="whats your name" />
+    <input onclick="submitForm()" type="button" value="submit"
+  </form>
+  <script>
+    const form = document.querySelector('.my__form')
+
+    function checkName(name) {
+      if (name == 'Alice' || name == 'Bob') {
+        return name
+      }
+      else {
+        return "you're not bob or alice"
+      }
+    }
+
+    function submitForm() {
+      console.log(checkName(form.elements['name'].value))
+    }
+
+  </script>
+</body>
+</html>

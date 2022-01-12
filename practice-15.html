@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+<body>
+  <style>
+    body, html {
+      padding: 0px;
+      margin: 0px;
+    }
+    .aligner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media only screen and (max-width: 600px) {
+      body {
+        display: none;
+      }
+    }
+  </style>
+    <div class="aligner">
+      Works
+    </div>
+    <p class="my_class"></p>
+  <script>
+
+    let testCasey = "boom"
+
+    let caseyArray = ['casey', 'stephen', 'mike']
+
+    const app = {
+      "first-name": "stooge",
+      doc: document,
+      names: [...caseyArray],
+      stooge: function (i) {
+        console.log(this["first-name"])
+      },
+      createLine: function() {
+        this.doc.writeln('this works')
+      },
+      getNames: function() {
+        console.log(this.names)
+      },
+      testFatArrow: () => {
+        console.log(testCasey)
+      }
+    }
+
+    app.stooge(app["first-name"])
+    app.createLine()
+    app.getNames()
+    app.testFatArrow()
+
+  </script>
+</body>
+</html>

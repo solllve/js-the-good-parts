@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+  <div class="list_container">
+  </div>
+  <input onclick="popListItem()" type="button" value="Pop an item" />
+  <script>
+    //concat merges arrays
+    //pop removes last item in array
+    const list = ['1','2','3']
+    function popListItem() {
+      list.splice(0,1)
+      document.querySelector('.list_container').innerHTML = list.toString()
+    }
+
+    const fruits = ['banana','apple','pear']
+    const citrus = fruits.slice(0,2)
+    document.writeln(citrus)
+  </script>
+</body>
+</html>

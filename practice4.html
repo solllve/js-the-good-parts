@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+  <form class="form__sum">
+    <input type="number" name="num" placeholder="number" />
+    <input onclick="getSum()" type="button" value="submit" />
+  </form>
+  <script>
+
+    /* Modify the previous program such that only multiples of three or five are considered in the sum, e.g. 3, 5, 6, 9, 10, 12, 15 for n=17
+
+    multiples of 3 and 5
+
+    modulo
+
+    */
+
+    function getMultiplesOfThreeAndFive(input) {
+      let sum = 0;
+      for (let i = 0; i < 1000; i++) {
+        if(i % 3 === 0 || i % 5 === 0){
+            sum += i;
+        }
+      }
+    }
+
+    const form = document.querySelector('.form__sum')
+
+    function sumOfAllNumbers(n) {
+      let total = 0
+      for (let i = 0; i <= n; i++){
+        total += i;
+      }
+      return total;
+    }
+
+    function getSum() {
+      let input = sumOfAllNumbers(form.elements['num'].value)
+      getMultiplesOfThreeAndFive(input)
+    }
+  </script>
+</body>
+</html>
